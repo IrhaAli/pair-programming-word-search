@@ -1,4 +1,4 @@
-const wordSearch = (letters, word) => {
+const wordSearch = function(letters, word) => {
     if ((letters.length === 0) || (word.length === 0)) {
         return false;
     }

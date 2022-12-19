@@ -3,8 +3,8 @@ const assert = chai.assert;
 
 const wordSearch = require('../wordsearch.js');
 
-describe("#wordSearch()", function () {
-  it("should return false if the word is not present", function () {
+describe("#wordSearch()", function() {
+  it("should return false if the word is not present", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -20,7 +20,7 @@ describe("#wordSearch()", function () {
     assert.isFalse(result);
   });
 
-  it("should return true if the word is present horizontally", function () {
+  it("should return true if the word is present horizontally", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -36,7 +36,7 @@ describe("#wordSearch()", function () {
     assert.isTrue(result);
   });
 
-  it("should return true if the word is present vertically", function () {
+  it("should return true if the word is present vertically", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -52,12 +52,12 @@ describe("#wordSearch()", function () {
     assert.isTrue(result);
   });
 
-  it("should return false if the words array is empty", function () {
+  it("should return false if the words array is empty", function() {
     const result = wordSearch([], 'LARRY');
     assert.isFalse(result);
   });
 
-  it("should return false if the word is empty", function () {
+  it("should return false if the word is empty", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -72,7 +72,7 @@ describe("#wordSearch()", function () {
     assert.isFalse(result);
   });
 
-  it("should return false if the word and letter are empty", function () {
+  it("should return false if the word and letter are empty", function() {
     const result = wordSearch([], '');
     assert.isFalse(result);
   });
